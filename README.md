@@ -4,7 +4,7 @@ Advent of code is a daily coding challenge throughout december.
 
 https://adventofcode.com/2023
 
-Solving problems with Typescript. I'm aiming to do every challenge this year.
+Solving problems with Typescript. I'm aiming to do every challenge this year. No AI used.
 
 # To run Typescript on VSCODE
 
