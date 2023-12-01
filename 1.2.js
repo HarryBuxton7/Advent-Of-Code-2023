@@ -56,7 +56,7 @@ lineReader.eachLine("./input1.txt", function (line, last) {
         sum += parseInt(numbers[0] + numbers[numbers.length - 1]);
     }
     if (last) {
-        console.log(sum); //55360
+        console.log(sum);
     }
 });
 //# sourceMappingURL=1.2.js.map
