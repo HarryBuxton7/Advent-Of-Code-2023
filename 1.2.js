@@ -9,44 +9,42 @@ lineReader.eachLine("./input1.txt", function (line, last) {
         if (!isNaN(parseInt(line[i]))) {
             numbers.push(line[i]);
         }
-        else {
-            wordNumber += line[i];
-            if (wordNumber.includes("one")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("1");
-            }
-            if (wordNumber.includes("two")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("2");
-            }
-            if (wordNumber.includes("three")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("3");
-            }
-            if (wordNumber.includes("four")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("4");
-            }
-            if (wordNumber.includes("five")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("5");
-            }
-            if (wordNumber.includes("six")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("6");
-            }
-            if (wordNumber.includes("seven")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("7");
-            }
-            if (wordNumber.includes("eight")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("8");
-            }
-            if (wordNumber.includes("nine")) {
-                wordNumber = wordNumber[wordNumber.length - 1];
-                numbers.push("9");
-            }
+        wordNumber += line[i];
+        if (wordNumber.includes("one")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("1");
+        }
+        if (wordNumber.includes("two")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("2");
+        }
+        if (wordNumber.includes("three")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("3");
+        }
+        if (wordNumber.includes("four")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("4");
+        }
+        if (wordNumber.includes("five")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("5");
+        }
+        if (wordNumber.includes("six")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("6");
+        }
+        if (wordNumber.includes("seven")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("7");
+        }
+        if (wordNumber.includes("eight")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("8");
+        }
+        if (wordNumber.includes("nine")) {
+            wordNumber = wordNumber[wordNumber.length - 1];
+            numbers.push("9");
         }
     }
     if (numbers.length === 1) {
