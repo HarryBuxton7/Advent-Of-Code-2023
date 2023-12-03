@@ -43,7 +43,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                     lineArray[i][j - 1] !== undefined) {
                     if (lineArray[i][j - 1] === "*") {
                         gear = true;
-                        gearCords = i.toString() + (j - 1).toString();
+                        gearCords = i.toString() + "//" + (j - 1).toString();
                     }
                 }
                 if (lineArray[i][j + 1] !== "." &&
@@ -51,7 +51,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                     lineArray[i][j + 1] !== undefined) {
                     if (lineArray[i][j + 1] === "*") {
                         gear = true;
-                        gearCords = i.toString() + (j + 1).toString();
+                        gearCords = i.toString() + "//" + (j + 1).toString();
                     }
                 }
                 try {
@@ -60,7 +60,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                         lineArray[i + 1][j - 1] !== undefined) {
                         if (lineArray[i + 1][j - 1] === "*") {
                             gear = true;
-                            gearCords = (i + 1).toString() + (j - 1).toString();
+                            gearCords = (i + 1).toString() + "//" + (j - 1).toString();
                         }
                     }
                 }
@@ -71,7 +71,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                         lineArray[i + 1][j + 1] !== undefined) {
                         if (lineArray[i + 1][j + 1] === "*") {
                             gear = true;
-                            gearCords = (i + 1).toString() + (j + 1).toString();
+                            gearCords = (i + 1).toString() + "//" + (j + 1).toString();
                         }
                     }
                 }
@@ -82,7 +82,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                         lineArray[i + 1][j] !== undefined) {
                         if (lineArray[i + 1][j] === "*") {
                             gear = true;
-                            gearCords = (i + 1).toString() + j.toString();
+                            gearCords = (i + 1).toString() + "//" + j.toString();
                         }
                     }
                 }
@@ -93,7 +93,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                         lineArray[i - 1][j - 1] !== undefined) {
                         if (lineArray[i - 1][j - 1] === "*") {
                             gear = true;
-                            gearCords = (i - 1).toString() + (j - 1).toString();
+                            gearCords = (i - 1).toString() + "//" + (j - 1).toString();
                         }
                     }
                 }
@@ -104,7 +104,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                         lineArray[i - 1][j + 1] !== undefined) {
                         if (lineArray[i - 1][j + 1] === "*") {
                             gear = true;
-                            gearCords = (i - 1).toString() + (j + 1).toString();
+                            gearCords = (i - 1).toString() + "//" + (j + 1).toString();
                         }
                     }
                 }
@@ -115,7 +115,7 @@ lineReader.eachLine("./input3.txt", function (line, last) {
                         lineArray[i - 1][j] !== undefined) {
                         if (lineArray[i - 1][j] === "*") {
                             gear = true;
-                            gearCords = (i - 1).toString() + j.toString();
+                            gearCords = (i - 1).toString() + "//" + j.toString();
                         }
                     }
                 }
@@ -125,7 +125,6 @@ lineReader.eachLine("./input3.txt", function (line, last) {
         var sum_1 = 0;
         gearNumbers.forEach(function (value, key) {
             if (value.length === 2) {
-                console.log(key, value);
                 sum_1 += parseInt(value[0]) * parseInt(value[1]);
             }
         });

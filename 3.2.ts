@@ -35,7 +35,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
         ) {
           if (lineArray[i][j - 1] === "*") {
             gear = true;
-            gearCords = i.toString() + (j - 1).toString();
+            gearCords = i.toString() + "//" + (j - 1).toString();
           }
         }
         if (
@@ -45,7 +45,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
         ) {
           if (lineArray[i][j + 1] === "*") {
             gear = true;
-            gearCords = i.toString() + (j + 1).toString();
+            gearCords = i.toString() + "//" + (j + 1).toString();
           }
         }
         try {
@@ -56,7 +56,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
           ) {
             if (lineArray[i + 1][j - 1] === "*") {
               gear = true;
-              gearCords = (i + 1).toString() + (j - 1).toString();
+              gearCords = (i + 1).toString() + "//" + (j - 1).toString();
             }
           }
         } catch (err) {}
@@ -68,7 +68,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
           ) {
             if (lineArray[i + 1][j + 1] === "*") {
               gear = true;
-              gearCords = (i + 1).toString() + (j + 1).toString();
+              gearCords = (i + 1).toString() + "//" + (j + 1).toString();
             }
           }
         } catch (err) {}
@@ -80,7 +80,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
           ) {
             if (lineArray[i + 1][j] === "*") {
               gear = true;
-              gearCords = (i + 1).toString() + j.toString();
+              gearCords = (i + 1).toString() + "//" + j.toString();
             }
           }
         } catch (err) {}
@@ -92,7 +92,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
           ) {
             if (lineArray[i - 1][j - 1] === "*") {
               gear = true;
-              gearCords = (i - 1).toString() + (j - 1).toString();
+              gearCords = (i - 1).toString() + "//" + (j - 1).toString();
             }
           }
         } catch (err) {}
@@ -104,7 +104,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
           ) {
             if (lineArray[i - 1][j + 1] === "*") {
               gear = true;
-              gearCords = (i - 1).toString() + (j + 1).toString();
+              gearCords = (i - 1).toString() + "//" + (j + 1).toString();
             }
           }
         } catch (err) {}
@@ -116,7 +116,7 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
           ) {
             if (lineArray[i - 1][j] === "*") {
               gear = true;
-              gearCords = (i - 1).toString() + j.toString();
+              gearCords = (i - 1).toString() + "//" + j.toString();
             }
           }
         } catch (err) {}
@@ -125,7 +125,6 @@ lineReader.eachLine("./input3.txt", (line: string, last: boolean) => {
     let sum: number = 0;
     gearNumbers.forEach((value, key) => {
       if (value.length === 2) {
-        console.log(key, value);
         sum += parseInt(value[0]) * parseInt(value[1]);
       }
     });
