@@ -1,7 +1,7 @@
 var lineReader = require("line-reader");
 
 let cardsArray = [];
-const inputLength: number = 193
+const inputLength: number = 193;
 for (let i = 0; i < inputLength; i++) {
   cardsArray.push(1);
 }
