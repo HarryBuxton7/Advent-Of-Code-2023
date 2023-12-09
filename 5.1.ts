@@ -42,5 +42,3 @@ lineReader.eachLine("./example5.1.txt", (line: string, last: boolean) => {
     console.log(lowestSeed);
   }
 });
-
-//if (/\d/.test(line)) {
