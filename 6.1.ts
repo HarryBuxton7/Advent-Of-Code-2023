@@ -26,7 +26,7 @@ function main(linesArray) {
     const [time, distance] = race;
     let waysToWinCount = 0;
     for (let i = 0; i < time; i++) {
-      let timeLeft = time - i;
+      let timeLeft = time - i;`1`
       if (timeLeft * i > distance) {
         waysToWinCount++;
       }

@@ -3,6 +3,9 @@
       "target": "ES5",
       "module": "CommonJS",
       "sourceMap": true,
-      "moduleDetection": "force" // <<<<< adding this 
+      "moduleDetection": "force", // <<<<< adding this 
+      "lib": [
+        "ES2021.String"
+      ]
     }
   }
