@@ -86,7 +86,7 @@ function main(linesArray) {
   // 3: 14681
   // 4: 18559
   // 5: 16897
-  let countingNumber = 20221;
+  let countingNumber = 20221; //if this doesnt reach the lowest answer then try again with the 5 other numbers, they may be lower
   let uniques = 0;
   let answerFound = false
   while (!answerFound) {
