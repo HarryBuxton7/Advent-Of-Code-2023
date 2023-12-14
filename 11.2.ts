@@ -67,10 +67,10 @@ function main(galaxyRows: string[]) {
 
 function expandUniverse(galaxyRows: string[]) {
   galaxyRows = markExpandedRows(galaxyRows);
-  let inversedArray = inverseArray(galaxyRows);
-  inversedArray = markExpandedRows(inversedArray);
-  let expandedArray = inverseArray(inversedArray);
-  return expandedArray;
+  let galaxyColumns = inverseArray(galaxyRows);
+  galaxyColumns = markExpandedRows(galaxyColumns);
+  galaxyRows = inverseArray(galaxyColumns);
+  return galaxyRows;
 }
 
 function markExpandedRows(array: string[]) {

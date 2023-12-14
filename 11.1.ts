@@ -43,10 +43,10 @@ function main(galaxyRows: string[]) {
 
 function expandUniverse(galaxyRows: string[]) {
   galaxyRows = addEmptySpace(galaxyRows);
-  let inversedArray = inverseArray(galaxyRows);
-  inversedArray = addEmptySpace(inversedArray);
-  let expandedArray = inverseArray(inversedArray);
-  return expandedArray;
+  let galaxyColumns = inverseArray(galaxyRows);
+  galaxyColumns = addEmptySpace(galaxyColumns);
+  galaxyRows = inverseArray(galaxyColumns);
+  return galaxyRows;
 }
 
 function addEmptySpace(array: string[]) {
