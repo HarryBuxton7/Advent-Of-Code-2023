@@ -66,14 +66,14 @@ function main(galaxyRows: string[]) {
 }
 
 function expandUniverse(galaxyRows: string[]) {
-  galaxyRows = addEmptySpace(galaxyRows);
+  galaxyRows = markExpandedRows(galaxyRows);
   let inversedArray = inverseArray(galaxyRows);
-  inversedArray = addEmptySpace(inversedArray);
+  inversedArray = markExpandedRows(inversedArray);
   let expandedArray = inverseArray(inversedArray);
   return expandedArray;
 }
 
-function addEmptySpace(array: string[]) {
+function markExpandedRows(array: string[]) {
   for (let i = 0; i < array.length; i++) {
     if (!array[i].includes("#")) {
       array[i] = array[i].replaceAll(".", "e");
